@@ -1,0 +1,58 @@
+body {
+    font-size: 1rem;
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+    background: #060713;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform;
+}
+.background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+.heading {
+    font-size: 48px;
+}
+.cursor {
+    position: fixed;
+    width: 1rem;
+    height: 1rem;
+    top: -1rem;
+    left: -1rem;
+    border-radius: 100%;
+    background: #ffffff;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+@media only screen and (max-width: 768px) {
+    .heading {
+        font-size: 32px;
+    }
+}
